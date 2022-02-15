@@ -1,0 +1,64 @@
+/*  navbar barra - navbar title - navbar links && paginado cont && searchbar search */
+
+.barra{
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #F2E205;
+}
+
+.title{
+    transition: 0.5s;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.create{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+.about{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+
+.title:hover{
+    transition: 0.25s;
+    color: white;
+}
+
+
+.cont{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.cont>button{
+    background-color: black;
+    width: 50px;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    border-color: white;
+    transition: 0.5s;
+}
+
+.cont>button:hover{
+    border-color: #F2E205;
+    color: #F2E205;
+    transition: 0.5s;
+
+}
+
+
