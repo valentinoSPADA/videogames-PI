@@ -87,7 +87,7 @@ function rootReducer(state = initialState, action) {
 
         case ALPHABETICAL_ORDER:
             let games1 = [...state.allVideogames]
-            const sortGamesAlphabetic = action.payload === "A to Z" ?
+            const sortGamesAlphabetic = action.payload === "a-z" ?
                 games1.sort((a, b) => {
                     if (a.name < b.name) {
                         return -1

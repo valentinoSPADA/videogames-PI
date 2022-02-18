@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-left: 12.2rem;
-    background-color: red;
+    background-color: black;
 }
 
 .div{
