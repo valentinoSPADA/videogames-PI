@@ -17,7 +17,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    ID: {
+    id: {
       type: DataTypes.UUID,
       allowNull: false,
       unique: true,
@@ -28,13 +28,13 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    lanzamiento: {
-      type: DataTypes.INTEGER,
+    released: {
+      type: DataTypes.STRING,
     },
     rating: {
       type: DataTypes.INTEGER,
     },
-    platform: {
+    platforms: {
       type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
