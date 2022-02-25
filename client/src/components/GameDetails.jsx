@@ -31,24 +31,38 @@ export default function Details() {
             {details ?
                 <div className={style.card}>
                     <Link to="/home" style={divStyle}>
-                        <button>Back</button>
+                        <button className={style.button}>BACK HOME</button>
                     </Link>
-                    <img src={details[0]?.background_image ? details[0].background_image : image} alt="Not Found" />
-                    <h1>{details[0]?.name}</h1>
-                    <div>
+                    <img src={details[0]?.background_image ? details[0].background_image : image} className={style.img} alt="Not Found" />
+                    <h1 className={style.title}>{details[0]?.name}</h1>
+                    <div className={style.genres}>
+                        <p>GENRES</p>
                         {details[0]?.genres?.map((gen) => gen?.name ?
                             <h2 key={gen.name}>{gen.name + ' '}</h2> : <h2 key={gen}>{gen + ' '}</h2>)
                         }
                     </div>
-                    <p> Released: {details[0]?.released}</p>
-                    <p>Rating: {details[0]?.rating}</p>
-                    <p>Platforms: {details[0]?.platforms} </p>
-                    <p>Description:</p>
-                    <p
-                        dangerouslySetInnerHTML={{
-                            __html: details[0]?.description,
-                        }}
-                    ></p>
+                    <div className={style.p}>
+                        <div className={style.re}>
+                            <p> RELEASED</p>
+                            <h2>{details[0]?.released}</h2>
+                        </div>
+                        <div className={style.ra}>
+                            <p>RATING</p>
+                            <h2>{details[0]?.rating}</h2>
+                        </div>
+                        <div className={style.pl}>
+                            <p>PLATFORMS</p>
+                            <h2>{details[0]?.platforms} </h2>
+                        </div>
+                        <div className={style.ds}>
+                            <p>DESCRIPTION</p>
+                            <h2
+                                dangerouslySetInnerHTML={{
+                                    __html: details[0]?.description,
+                                }}
+                            ></h2>
+                        </div>
+                    </div>
                 </div>
                 :
                 <div>

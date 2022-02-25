@@ -1,26 +1,20 @@
 
 
 .card{
-    margin-top: 20px;
-    display: flex;
-    border:solid;
+    width: 300px;
+	margin: 10px;
     border-color: white;
-    flex-direction: column;
-    width: 23rem;
-    height: 24rem;
-    background-color: black;
-    border-radius: 5px;
-    font-family: sans-serif;
+    background-color: rgb(17, 17, 17);
+
 }
 
 
 .img{
-    display: block;
+    display: flex;
     width: 100%;
     height: 300px;
     align-items: center;
-    background-color: black;
-    transition: 0.5s;
+    background-color: white;
     object-fit:cover;
 }
 
@@ -28,34 +22,61 @@
     display: flex;
     position: absolute;
     color:white;
+    background-color: #66666686;
     justify-content: center;
-    width: 23rem;
-    font-size: 30px;
+    align-items: center;
+    width: 17rem;
+    margin: 10px 0 0 13.5px;
+    font-size: 26px;
     font-family: sans-serif;
-    height: 32%;
+    height: 60px;
     padding: 0 0 0 0;
-    box-shadow:  inset 0 50px 100px 0 black;
-    
-    
+    box-shadow: 15px 15px 20px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: black 0px 0px, 0 0 1em black;
+    font-weight: 500;
 }
 
 .genre{
     text-decoration: none;
-    color: #F2E205;
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 5px;
+    align-items: end;
+    height: 30px;
+    margin: 20px;
 }
 
-.genre>p{
-    border: solid;
-    padding: 10px;
-    border-radius: 10px;
-    border-color: white;
+.p{
+    color: white;
 }
 
-.img:hover {
-    opacity: 80%;
-    transition: 0.5s;
-    }
+.hr{
+    width: 260px;
+    border-color: gray;
+}
+
+.link{
+    text-decoration: none;
+    width: 100px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 2px;
+    background: #1a73e8;
+
+}
+
+.link2{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+
+.link:hover{
+    background: #0565e4;
+}

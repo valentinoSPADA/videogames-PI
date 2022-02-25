@@ -4,54 +4,104 @@
     display: flex;
     justify-content: space-around;
     height: 3rem;
+    width: 100%;
     align-items: center;
-    font-family: sans-serif;
-    background-color: #F2E205;
+    font-family:Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: rgb(17, 17, 17);
 }
 
 .title{
     transition: 0.5s;
     text-decoration: none;
     font-size: 20px;
-    color: black;
-    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+    padding-bottom: 2px;
+    
+    /* position: relative;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5); */
 }
+/* 
+.title::before{
+    content: attr(title);
+    position: absolute;
+    color: #fff;
+    width: 30%;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.title:hover::before{
+    width: 100%;
+} */
 
 .create{
     text-decoration: none;
     font-size: 20px;
-    color: black;
-    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+    padding-bottom: 2px;
 }
 .about{
     text-decoration: none;
     font-size: 20px;
-    color: black;
-    font-weight: bold;
+    color: white;
+    letter-spacing: 0.8px;
+    padding-bottom: 2px;
 }
 
 
 .title:hover{
     transition: 0.25s;
     color: white;
+    border-bottom: solid 2px;
+    border-color: white;
 }
 
+.create:hover{
+    transition: 0.25s;
+    color: white;
+    border-bottom: solid 2px;
+    border-color: white;
+    
+}
+
+.about:hover{
+    transition: 0.25s;
+    color: white;
+    border-bottom: solid 2px;
+    border-color: white;
+    
+}
 
 .cont{
     display: flex;
     justify-content: space-evenly;
     height: 40px;
     margin-top: 10px;
+    background: -webkit-linear-gradient(#2C118C, #AB15BF);
+    width: 90%;
+    border: solid;
+    margin-bottom: 20px;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    align-items: center;
 }
 
 .cont>button{
     background-color: black;
-    width: 50px;
+    width: 30px;
     color: white;
-    border: solid;
+    border: black;
     border-radius: 5px;
-    border-color: white;
     transition: 0.5s;
+    height: 30px;
 }
 
 .cont>button:hover{
@@ -61,4 +111,24 @@
 
 }
 
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.searchButton{ 
+    height: 25px;
+    margin-left: 5px;
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 2px;
+    background-color: white;
+    font-family:Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    cursor: pointer;
+}
+
+.searchInput{
+    height: 19px;
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 2px;
+}

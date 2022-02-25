@@ -73,12 +73,12 @@ export default function Home() {
     return (
         <div className={style.div}>
             <div className={style.generos}>
-                <h2>GENRES</h2>
+                <div className={style.h2genre}>FILTER BY GENRE</div>
                 <div className={style.bot}>
-                    <button onClick={handleFilterByGenres} name="All" key='All'>All</button>
+                    <button onClick={handleFilterByGenres} className={style.genre} name="All" key='All'>All</button>
                     {allGenres &&
                         allGenres.map((genres) => (
-                            <button onClick={handleFilterByGenres} name={genres.name} key={genres.name}>{genres.name}</button>
+                            <button onClick={handleFilterByGenres} className={style.genre} name={genres.name} key={genres.name}>{genres.name}</button>
                         ))}
                 </div>
             </div>
@@ -115,14 +115,7 @@ export default function Home() {
 
                 {currentVideogames.length > 0 ?
                     (<div>
-                        <div className={style.contenedorChico}>
-                            <Paginado
-                                videogamesPerPage={videogamesPerPage}
-                                allVideoGames={games.length}
-                                paginado={paginado}
-                                key='Paginado'
-                            />
-                        </div>
+
                         <div className={style.total}>{
 
                             <div className={style.cardDiv}>
@@ -142,11 +135,20 @@ export default function Home() {
                             </div>
                         }
                         </div>
+                        <div className={style.contenedorChico}>
+                            <Paginado
+                                videogamesPerPage={videogamesPerPage}
+                                allVideoGames={games.length}
+                                paginado={paginado}
+                                key='Paginado'
+                            />
+                        </div>
                     </div>
                     )
                     :
                     (<div className={style.load}>
-                        <div className={style.loader}>
+                        <div className={style.spinner}>
+                            
                         </div>
                     </div>
                     )

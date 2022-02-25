@@ -22,8 +22,8 @@ export default function SearchBar() {
 
     return (
         <div className={style.search}>
-            <input type='text' placeholder='Search Video Game' onChange={handleChange} value={name} />
-            <button type='submit' onClick={handleClick}>Search</button>
+            <input type='text' className={style.searchInput} placeholder='Search Video Game' onChange={handleChange} value={name} />
+            <button type='submit' onClick={handleClick} className={style.searchButton}>Search</button>
         </div>
     )
 }

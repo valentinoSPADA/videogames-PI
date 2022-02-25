@@ -202,7 +202,7 @@ const searchGame = async (req, res) => {
                 description,
                 released,
                 rating,
-                platforms: platforms.map((p) => ` -${p.platform.name}- `),
+                platforms: platforms.map((p) => ` ${p.platform.name} `),
                 genres: genres.map((g) => g.name)
             });
             res.status(200).json(game);

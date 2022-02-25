@@ -8,7 +8,7 @@ import style from './styles/created.module.css'
 const validate = (input) => {
     let errors = {};
     if (input.name === "") {
-        errors.name = "Name incomplete.";
+        errors.name = "Name incomplete";
     } else if (!/^[A-Z]+[A-Za-z0-9\s]+$/g.test(input.name)) {
         errors.name = 'Insert first letter in uppercase'
     }
@@ -18,11 +18,11 @@ const validate = (input) => {
     }
 
     if (input.background_image === "") {
-        errors.background_image = "What image does it have?";
+        errors.background_image = "It need an URL of an image";
     }
 
     if (!input.description) {
-        errors.description = "Description incomplete.";
+        errors.description = "Description incomplete";
     }
 
     if (input.rating > 5 || input.rating < 0) {
@@ -30,15 +30,15 @@ const validate = (input) => {
     }
 
     if (!input.released) {
-        errors.released = "When was it released?";
+        errors.released = "It need a date of when it was released";
     }
 
     if (input.platforms.length === 0) {
-        errors.platforms = "Choose a platform to continue";
+        errors.platforms = "Choose at least one platform to continue";
     }
 
     if (input.genres.length === 0) {
-        errors.genres = "Choose a genre to continue";
+        errors.genres = "Choose at least one genre to continue";
     }
 
     return errors;
@@ -123,6 +123,7 @@ export default function VideogameCreate() {
                 genres: [...input.genres, e.target.value],
             })
         );
+        console.log(input)
     }
 
     const handleDeleteG = (e) => {
@@ -135,7 +136,7 @@ export default function VideogameCreate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (Object.keys(errors).length > 0) {
-            alert("Complete the required fields!");
+            alert("Complete the forms or verify the information!");
         } else {
             dispatch(addNewGame(input))
             alert("You've a New Video Game!")
@@ -165,6 +166,7 @@ export default function VideogameCreate() {
 
     return (
         <div className={style.fondo}>
+        
             <div className={style.form}>
                 <h1>NEW VIDEOGAME</h1>
                 <form onSubmit={handleSubmit}>
@@ -173,7 +175,7 @@ export default function VideogameCreate() {
                             <div className={style.box1}>
                                 <div>
                                     <label>Name: </label>
-                                    <input type='text' placeholder="What is it called?" value={input.name} name='name' onChange={handleChange}></input>
+                                    <input type='text' placeholder="Name of the game" value={input.name} name='name' onChange={handleChange}></input>
                                     {errors.name ? <p className={style.error}> {errors.name} </p> : <p className={style.espacio}></p>}
                                 </div>
                                 <div>
