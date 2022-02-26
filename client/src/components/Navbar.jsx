@@ -11,9 +11,9 @@ export default function NavBar() {
             <div >
                 <Link to="/created" className={navbar.create}> CREATE VIDEOGAME </Link>
             </div>
-            <div >
+            {/* <div >
                 <Link to="/about" className={navbar.about}> ABOUT ME </Link>
-            </div>
+            </div> */}
         </nav>
     );
 }

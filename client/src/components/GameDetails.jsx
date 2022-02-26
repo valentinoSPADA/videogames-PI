@@ -30,9 +30,6 @@ export default function Details() {
         <div className={style.cont}>
             {details ?
                 <div className={style.card}>
-                    <Link to="/home" style={divStyle}>
-                        <button className={style.button}>BACK HOME</button>
-                    </Link>
                     <img src={details[0]?.background_image ? details[0].background_image : image} className={style.img} alt="Not Found" />
                     <h1 className={style.title}>{details[0]?.name}</h1>
                     <div className={style.genres}>
@@ -63,14 +60,17 @@ export default function Details() {
                             ></h2>
                         </div>
                     </div>
+                    <Link to="/home" style={divStyle}>
+                        <button className={style.button}>BACK HOME</button>
+                    </Link>
                 </div>
                 :
                 <div>
                     <div>
                         <h1> Game not found</h1>
-                        <Link to="/videogames">
-                            <button> Back to Games </button>
-                        </Link>
+                        <Link to="/home" style={divStyle}>
+                        <button className={style.button}>BACK HOME</button>
+                    </Link>
                     </div>
                 </div>
             }
