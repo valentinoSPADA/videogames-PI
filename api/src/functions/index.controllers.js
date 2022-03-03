@@ -216,11 +216,6 @@ const searchGame = async (req, res) => {
 
 const createGame = async (req, res) => {
     try {
-
-        const apikey = req.query.apikey
-        if (apikey !== 'henry') {
-            res.status(401).send('No autorizado')
-        }
         const { name, background_image, description, released, rating, platforms, genres } = req.body;
         const newVideogame = await Videogame.create({
             name,
@@ -271,7 +266,17 @@ const allPlatforms = async (req, res) => {
     }
 }
 
-
+async function createGenre(res, req){
+    try {
+        const { name } = req.body;
+        const newGenre = await Genre.create({
+            name
+        })
+        res.status(201).json(newGenre)
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 
@@ -281,4 +286,5 @@ module.exports = {
     searchGame,
     createGame,
     allPlatforms,
+    createGenre
 }

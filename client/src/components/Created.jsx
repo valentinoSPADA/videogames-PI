@@ -90,16 +90,18 @@ export default function VideogameCreate() {
 
     const handleSelectP = (e) => {
         e.preventDefault();
-        setInput({
-            ...input,
-            platforms: [...input.platforms, e.target.value]
-        })
-        setErrors(
-            validate({
+        if(!input.platforms.includes(e.target.value)){
+            setInput({
                 ...input,
-                platforms: [...input.platforms, e.target.value],
+                platforms: [...input.platforms, e.target.value]
             })
-        );
+            setErrors(
+                validate({
+                    ...input,
+                    platforms: [...input.platforms, e.target.value],
+                })
+                );
+        }
     }
 
     const handleDeleteP = (e) => {
@@ -111,17 +113,19 @@ export default function VideogameCreate() {
 
     const handleSelectG = (e) => {
         e.preventDefault();
-        setInput({
-            ...input,
-            genres: [...input.genres, e.target.value]
-        })
-        setErrors(
-            validate({
+        if(!input.platforms.includes(e.target.value)){
+            setInput({
                 ...input,
-                genres: [...input.genres, e.target.value],
+                genres: [...input.genres, e.target.value]
             })
-        );
-        console.log(input)
+            setErrors(
+                validate({
+                    
+                    ...input,
+                    genres: [...input.genres, e.target.value],
+                })
+                );
+            }
     }
 
     const handleDeleteG = (e) => {

@@ -51,7 +51,7 @@ function rootReducer(state = initialState, action) {
 
 
         case FILTER_RATING:
-            let games2 = [...state.allVideogames]
+            let games2 = [...state.videoGames]
             const sortGamesRating = action.payload === "top" ?
                 games2.sort((a, b) => {
                     if (a.rating > b.rating) {
@@ -70,13 +70,13 @@ function rootReducer(state = initialState, action) {
                 })
             return {
                 ...state,
-                videoGames: action.payload === 'rating' ? state.allVideogames : sortGamesRating
+                videoGames: action.payload === 'rating' ? state.videoGames : sortGamesRating
             }
 
 
 
         case FILTER_CREATED:
-            let games = [...state.allVideogames]
+            let games = [...state.videoGames]
             let filterCreated = action.payload === 'created' ? games?.filter(g => typeof g.id === "string") : games?.filter(g => typeof g.id === "number")
             return {
                 ...state,
@@ -86,7 +86,7 @@ function rootReducer(state = initialState, action) {
 
 
         case ALPHABETICAL_ORDER:
-            let games1 = [...state.allVideogames]
+            let games1 = [...state.videoGames]
             const sortGamesAlphabetic = action.payload === "a-z" ?
                 games1.sort((a, b) => {
                     if (a.name < b.name) {
@@ -105,7 +105,7 @@ function rootReducer(state = initialState, action) {
                 })
             return {
                 ...state,
-                videoGames: action.payload === 'alpha' ? state.allVideogames : sortGamesAlphabetic
+                videoGames: action.payload === 'alpha' ? state.videoGames : sortGamesAlphabetic
             }
 
 
