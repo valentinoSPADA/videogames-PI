@@ -67,7 +67,7 @@ export default function Details() {
                 :
                 <div>
                     <div>
-                        <h1> Game not found</h1>
+                        <h1>Game not found</h1>
                         <Link to="/home" style={divStyle}>
                         <button className={style.button}>BACK HOME</button>
                     </Link>
