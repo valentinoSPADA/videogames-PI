@@ -1,13 +1,9 @@
-
-
 .card{
     width: 300px;
 	margin: 10px;
     border-color: white;
     background-color: rgb(17, 17, 17);
-
 }
-
 
 .img{
     display: flex;
@@ -67,7 +63,6 @@
     margin-top: 20px;
     border-radius: 2px;
     background: #1a73e8;
-
 }
 
 .link2{
@@ -75,7 +70,6 @@
     text-decoration: none;
     margin-bottom: 3px;
 }
-
 
 .link:hover{
     background: #0565e4;

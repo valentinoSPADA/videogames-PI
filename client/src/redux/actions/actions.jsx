@@ -14,13 +14,13 @@ export const GET_DETAILS = 'GET_DETAILS';
 
 
 export function getGames() {
-    return async function(dispatch) {
+    return function(dispatch) {
         
-        const videoGames = await axios('http://localhost:3001/videogames')
-        return dispatch({
+        axios('http://localhost:3001/videogames')
+        .then(res=>dispatch({
             type: GET_GAMES,
-            payload: videoGames.data
-        })
+            payload: res.data
+        })) 
     }
 }
 

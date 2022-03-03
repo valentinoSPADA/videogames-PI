@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getGames, orderByRating, filterCreated, alphabeticalOrder, getGenres, filterByGenres, getGamesbyName } from '../redux/actions/actions.jsx';
+import { getGames, orderByRating, filterCreated, alphabeticalOrder, getGenres, filterByGenres } from '../redux/actions/actions.jsx';
 import Cards from './Cards.jsx'
 import style from './styles/home.module.css'
-import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar.jsx';
 import Paginado from './Paginado.jsx';
 
@@ -39,19 +38,18 @@ export default function Home() {
     }
 
 
-    const [order, setOrder] = useState('')
     const handleSortAlphabetical = (e) => {
         e.preventDefault();
         dispatch(alphabeticalOrder(e.target.value))
         setCurrentPage(1)//aviso que empezamos desde la pagina 1
-        setOrder(`Ordenado ${e.target.value}`) //Este estado avisa que se hizo un ordenamiento y como solo se renderiza cuando ubo un cambio de estado o cambian las props, "forzamos" a que se renderice de nuevo la lista.
+         //Este estado avisa que se hizo un ordenamiento y como solo se renderiza cuando hubo un cambio de estado o cambian las props, "forzamos" a que se renderice de nuevo la lista.
     }
 
     const handleSortRating = (e) => {
         e.preventDefault();
         dispatch(orderByRating(e.target.value))
         setCurrentPage(1)//aviso que empezamos desde la pagina 1
-        setOrder(`Ordenado ${e.target.value}`) //Este estado avisa que se hizo un ordenamiento y como solo se renderiza cuando ubo un cambio de estado o cambian las props, "forzamos" a que se renderice de nuevo la lista.
+         //Este estado avisa que se hizo un ordenamiento y como solo se renderiza cuando ubo un cambio de estado o cambian las props, "forzamos" a que se renderice de nuevo la lista.
     }
 
     useEffect(() => {

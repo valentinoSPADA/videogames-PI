@@ -55,15 +55,12 @@
     display: flex;
     word-spacing: 270pt;
     font-family:Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
     color:#F2F2F2; 
     height: auto;
     width: auto;
 }
 
 .h6{
-    
-    
     font-family:Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 15px;
     display: flex;
